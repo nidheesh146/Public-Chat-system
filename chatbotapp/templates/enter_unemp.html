@@ -1,0 +1,103 @@
+{% extends 'unemp_nav.html' %}
+{% block content %}
+
+<style>
+    .footer {
+        background-color: white ;
+        padding: 20px;
+        text-align: center;
+        clear: both;
+        position: relative;
+         width: 100%;
+        margin-top: auto;
+        left: 20px  ;
+        top: 30px;
+        
+    }
+    
+    .footer p {
+        margin-bottom: 0px;
+    }
+    
+   
+    .footer a:hover {
+        color: #ccc;
+    }
+    
+    .footer p a {
+        margin-right: 0px;
+    }
+    
+    /* Make the footer stick to the bottom */
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .content {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+       
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+          <div 
+              class="card shadow-lg border-0 rounded-3"
+              style="
+                  background-image: url('');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-color: rgba(255, 255, 255, 0.8);
+                  backdrop-filter: blur(5px);
+                  border-radius: 15px;
+                  overflow: hidden;">
+              <div 
+                  class="card-body p-4"
+                  style="
+                      background-color: rgba(255, 255, 255, 0.85); 
+                      border-radius: 15px;">
+                  <h1 class="text-center text-primary mb-4">Welcome to the Chat</h1>
+                  <form action="/chat_unemp" method="get">
+                      <div class="form-group mb-3">
+                          <input
+                              class="form-control form-control-lg rounded-pill"
+                              type="text"
+                              id="username"
+                              name="username"
+                              placeholder="Enter your username"
+                              required>
+                      </div>
+                      <button
+                          class="btn btn-primary btn-block w-100 rounded-pill"
+                          type="submit"
+                          style="font-size: 1.2rem;">
+                          Join Chat
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+{% endblock %}
+
+
+
+
+
+
+
+

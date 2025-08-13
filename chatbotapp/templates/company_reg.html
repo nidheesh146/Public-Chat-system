@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    /* Normal navbar styling */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    /* Slider Section Styling */
+    .slider-section {
+        position: relative;
+        background: linear-gradient(to left, rgba(134, 160, 160, 0.8), rgba(138, 133, 185, 0.5)),
+                    url('https://imgs.search.brave.com/Uevk4Z9nNE6yvAg3shcwylu6brD9AiKehTYjv5XSb_g/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvODU1/MTk4NDYwL3Bob3Rv/L2J1c2luZXNzLWhh/bmRzaGFrZS1pbi10/aGUtb2ZmaWNlLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1X/ZktOWEtpSzVlUTNt/NExKMFRQTGMyYUZ1/U0x3b3RpUzZsYTRG/Yi1WbkRFPQ');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 150px 0;
+        text-align: left;
+    }
+
+    /* Adjust Signup Form Position */
+    .signup-form-container {
+        margin-top: -100px;
+        border-radius: 30px; /* Adjust this value to move the form up or down */
+    }
+
+    /* Footer Styling */
+    .footer {
+        background-color: #f0f0f0; /* Grey background */
+        padding: 20px 0;
+        text-align: center;
+        color: #555;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<div class="content">
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Slider Section -->
+<div class="slider-section">
+    <div class="container content-container">
+        <h1><b>Job Market</b></h1>
+        <p>We provide top-notch Services with expertise. Our dedicated team of Business and IT professionals ensures that you receive the best Services tailored to your needs. We're here for you every step of the way.</p>
+    </div>
+</div>
+
+<div class="container text-center signup-form-container">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-10 d-block mx-auto mt-5">
+      <div class="row">
+        <div class="col-xl-12 col-md-12 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h3>Signup</h3>
+              <p class="text-muted">Create your account</p>
+              <div class="row">
+                <div class="input-group mb-3 col-6">
+                  <input type="text" class="form-control textbox-dg" placeholder="company name">
+                </div>
+                <div class="input-group mb-4 col-6">
+                  <input type="text" class="form-control textbox-dg" placeholder="builing no.">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-group mb-4 col-6">
+                  <input type="password" class="form-control textbox-dg" placeholder="Password">
+                </div>
+                <div class="input-group mb-4 col-6">
+                  <input type="password" class="form-control textbox-dg" placeholder="Phone number">
+                </div>
+              </div>
+              <div class="input-group mb-4">
+                <input type="password" class="form-control textbox-dg" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="input-group mb-4 col-6">
+<input type="number" class="form-control textbox-dg" placeholder="Company id">
+                </div>
+                <div class="input-group mb-4 col-6">
+                    <input type="text" class="form-control textbox-dg" placeholder="Company url">
+                                    </div>
+              </div>
+              <div class="input-group mb-4">
+                <input type="file" class="form-control textbox-dg">
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a href="" class="btn btn-primary btn-block box-shadow-0 px-0">Sign Up</a>
+                </div>
+              </div><br>
+              <div class="row ml-1">
+                <p>Already have an account?</p><a href="{% url 'company_login' %}">Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Info Section -->
+
+<!-- Footer Section -->
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('.navbar-toggler').click(function() {
+    if ($(this).hasClass('collapsed')) {
+      $('.navbar').addClass('bg-toggled');
+    } else {
+      $('.navbar').removeClass('bg-toggled');
+    }
+  });
+  $('.navbar-collapse').on('hide.bs.collapse', function() {
+    $('.navbar').removeClass('bg-toggled');
+  });
+  $('.navbar-collapse').on('show.bs.collapse', function() {
+    $('.navbar').addClass('bg-toggled');
+  });
+});
+</script>
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
+{% endblock %}

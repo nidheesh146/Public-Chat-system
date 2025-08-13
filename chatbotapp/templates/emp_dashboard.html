@@ -1,0 +1,107 @@
+{% extends 'unemp_nav.html' %}
+{% block content %}
+    <style>
+        .card{
+            margin: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+          .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+      
+    </style>
+<div class="container my-5">
+    <!-- Dashboard Heading -->
+    <div class="d justify-content-between align-items-center mb-4">
+        <h1 class="display-4 text-primary">Welcome!</h1>
+        <p class="text-muted">Browse job vacancies and apply for the one that suits you best.</p>
+    </div>
+
+    <!-- Job Vacancies Section -->
+    <div class="row g-4">
+        <!-- Job Vacancy Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Software Developer</h5>
+                    <p class="card-text text-muted">
+                        <strong>Company:</strong> Tech Corp<br>
+                        <strong>Location:</strong> New York<br>
+                        <strong>Salary:</strong> $60,000 - $80,000<br>
+                        <strong>Job Type:</strong> Full-Time
+                    </p>
+                    <a href="" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Vacancy Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Digital Marketing</h5>
+                    <p class="card-text text-muted">
+                        <strong>Company:</strong> Marketing Inc<br>
+                        <strong>Location:</strong> Remote<br>
+                        <strong>Salary:</strong> $50,000 - $70,000<br>
+                        <strong>Job Type:</strong> Part-Time
+                    </p>
+                    <a href="" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Vacancy Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Graphic Designer</h5>
+                    <p class="card-text text-muted">
+                        <strong>Company:</strong> Design Studio<br>
+                        <strong>Location:</strong> Remote<br>
+                        <strong>Salary:</strong> $45,000 - $65,000<br>
+                        <strong>Job Type:</strong> Freelance
+                    </p>
+                    <a href="" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Vacancy Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Data Analyst</h5>
+                    <p class="card-text text-muted">
+                        <strong>Company:</strong> Data Solutions<br>
+                        <strong>Location:</strong> San Francisco<br>
+                        <strong>Salary:</strong> $70,000 - $90,000<br>
+                        <strong>Job Type:</strong> Full-Time
+                    </p>
+                    <a href="" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Vacancy Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Project Manager</h5>
+                    <p class="card-text text-muted">
+                        <strong>Company:</strong> Project Co.<br>
+                        <strong>Location:</strong> Chicago<br>
+                        <strong>Salary:</strong> $80,000 - $100,000<br>
+                        <strong>Job Type:</strong> Full-Time
+                    </p>
+                    <a href="" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

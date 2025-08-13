@@ -1,0 +1,67 @@
+{% extends 'admin_nav.html' %}
+{% block content %}
+
+<style>
+    .footer{
+        margin-top: 260px;
+        top: 0;
+        width: 101.5%;
+        background-color: white;
+        padding: 20px;
+        
+        
+    }
+   
+</style>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+          <div 
+              class="card shadow-lg border-0 rounded-3"
+              style="
+                  background-image: url('');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-color: rgba(255, 255, 255, 0.8);
+                  backdrop-filter: blur(5px);
+                  border-radius: 15px;
+                  overflow: hidden;">
+              <div 
+                  class="card-body p-4"
+                  style="
+                      background-color: rgba(255, 255, 255, 0.85); 
+                      border-radius: 15px;">
+                  <h1 class="text-center text-primary mb-4">Welcome to the Chat</h1>
+                  <form action="/chat" method="get">
+                      <div class="form-group mb-3">
+                          <input
+                              class="form-control form-control-lg rounded-pill"
+                              type="text"
+                              id="username"
+                              name="username"
+                              placeholder="Enter your username"
+                              required>
+                      </div>
+                      <button
+                          class="btn btn-primary btn-block w-100 rounded-pill"
+                          type="submit"
+                          style="font-size: 1.2rem;">
+                          Join Chat
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+{% endblock %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    /* Normal navbar styling */
+  
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+   
+
+</style>
+
+
+<div class="content">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+   
+
+    /* Slider Section Styling */
+    .slider-section {
+        position: relative;
+        background: linear-gradient(to left, rgba(134, 160, 160, 0.8), rgba(138, 133, 185, 0.5)),
+                    url('https://imgs.search.brave.com/_QbkGuus7INru_aAwSSdMy--5GymDJwHkS6i--jfxQM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/MjIyNDk1Ny9waG90/by9idXNpbmVzc21h/bi1hbmFseXNpbmct/Zm9yZXgtdHJhZGlu/Zy1ncmFwaC1maW5h/bmNpYWwtZGF0YS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/QXhFOUxZT3NGS1pB/cHktMDJoQi02a1I5/cTA4RXpsN0ZmV0lq/bFdwcUFKcz0');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 150px 0;
+        text-align: left;
+    }
+
+    .slider-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .slider-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        background-color: #fff;
+        color: #1fab89;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    /* Form Styling */
+    .form-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        max-width: 500px;
+        background: white;
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-top: 25%; /* Adjust if needed */
+        z-index: 2;
+    }
+
+    .form-content {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .form-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-field {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .input-field input {
+        height: 100%;
+        width: 100%;
+        background: none;
+        outline: none;
+        font-size: 0.95rem;
+        padding: 0 15px;
+        border: 1px solid #717171;
+        border-radius: 3px;
+    }
+
+    .input-field input:focus {
+        border: 1px solid #00bcd4;
+    }
+    .form-container{
+      margin-top: 550px;
+    }
+
+    .input-field label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: #4a4646;
+        pointer-events: none;
+        transition: 0.2s ease;
+    }
+
+    .input-field input:is(:focus, :valid) {
+        padding: 16px 15px 0;
+    }
+
+    .input-field input:is(:focus, :valid)~label {
+        transform: translateY(-120%);
+        color: #00bcd4;
+        font-size: 0.75rem;
+    }
+
+    .form-box a {
+        color: #00bcd4;
+        text-decoration: none;
+    }
+
+    .form-box a:hover {
+        text-decoration: underline;
+    }
+
+    form :where(.forgot-pass-link, .policy-text) {
+        display: inline-flex;
+        margin-top: 13px;
+        font-size: 0.95rem;
+    }
+
+    form button {
+        width: 100%;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 14px 0;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 25px 0;
+        background: #608edf;
+        transition: 0.2s ease;
+    }
+
+    form button:hover {
+        background: #0097a7;
+    }
+
+    .form-content .bottom-link {
+        text-align: center;
+    }
+
+    .info-section {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .info-section h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .info-section p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .info-section .contact-number {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00b894;
+    }
+
+    /* Align Info and Footer at Bottom */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .info-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 25%;
+    }
+
+    .footer {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        font-weight: 600;
+        background-color: #b5bbb9;
+        color: white;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+        position: relative;
+    }
+
+    /* Mobile and Tablet Responsiveness */
+    @media (max-width: 950px) {
+        .form-container {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 40%; /* Adjust margin for tablet view */
+        }
+        .slider-section h1 {
+            font-size: 2.5rem;
+        }
+        .slider-section p {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 1200px) {
+/* For larger tablets, 3 cards per row */
+.form-container {
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 480px; /* Adjust margin for smaller tablets */
+            margin-bottom: 20px;
+        }
+        .info-container {
+            margin-top: 380px;
+        }
+}
+    @media (max-width: 768px) {
+        .form-container {
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 450px; /* Adjust margin for smaller tablets */
+            margin-bottom: 20px;
+        }
+        .slider-section h1 {
+            font-size: 2.2rem;
+        }
+        .slider-section p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 550px; /* Increase margin for mobile view */
+        }
+        .form-details {
+            padding: 20px;
+        }
+        .info-container {
+            margin-top: 400px;
+        }
+        .slider-section h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+    
+</style>
+
+
+
+<!-- Navbar -->
+
+
+<!-- Slider Section -->
+<div class="slider-section">
+    <div class="container content-container">
+        <h1><b>Job Market</b></h1>
+        <p>We provide top-notch Job services with expertise. Our dedicated team of Businessand IT professionals ensures that you receive the best Service tailored to your needs. We're here for you every step of the way.</p>
+    </div>
+    
+</div>
+<br><br><br><br>
+<!-- Login Form -->
+<div class="form-container">
+    <div class="form-content form-box login">
+        <h2>LOGIN</h2>
+        <form action="{% url 'admindash' %}">
+            <div class="input-field">
+                <input type="text" required="" fdprocessedid="bfsmn9">
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required="" fdprocessedid="vlphlo">
+                <label>Password</label>
+            </div>
+            <a href="#" class="forgot-pass-link">Forgot password?</a>
+            <button type="submit" fdprocessedid="xm50b">Log In</button>
+        </form>
+        <div class="bottom-link">
+            Don't have an account? <a href="{% url 'company_registration' %}" id="signup-link">Signup</a>
+        </div>
+    </div>
+</div>
+
+<!-- Info Section -->
+<div class="info-container">
+    <div class="info-section">
+       
+        <p><strong>for Queries:</strong> mail to JobMarket@gmail.com</p>
+    </div>
+   
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</div>
+
+<script> $(document).ready(function ()
+{ $('.navbar-toggler').click(function () 
+{ if ($(this).hasClass('collapsed')) { $('.navbar').addClass('bg-toggled'); } 
+else { $('.navbar').removeClass('bg-toggled'); } }); $('.navbar-collapse').on('hide.bs.collapse', function () { $('.navbar').removeClass('bg-toggled'); }); $('.navbar-collapse').on('show.bs.collapse', 
+function () { $('.navbar').addClass('bg-toggled'); }); });</script>
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
+
+{% endblock %}
